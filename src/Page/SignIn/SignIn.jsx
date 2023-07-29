@@ -7,7 +7,7 @@ const SignIn = () => {
 
   const EmailValue = useRef();
   const PassValue = useRef();
-  const [data, setUserData] = useState(
+  const [data] = useState(
     JSON.parse(localStorage.getItem("Userdata"))
   );
 
@@ -71,7 +71,7 @@ const SignIn = () => {
                   </label>
                   <div className="text-sm">
                     <a
-                      href="#"
+                      href="/"
                       className="font-semibold text-indigo-600 hover:text-indigo-500"
                     >
                       Forgot password?

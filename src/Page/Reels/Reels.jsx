@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import VideoItem from "../VideoItem";
 const Reels = () => {
@@ -204,7 +204,7 @@ const Reels = () => {
                   </span>
                 </div>
                 <div className="Reels_row_col_options_item">
-                  <img src={item.musicImg} alt="music image" />
+                  <img src={item.musicImg} alt="musicImage" />
                 </div>
               </div>
             </div>

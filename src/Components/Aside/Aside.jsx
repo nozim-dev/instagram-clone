@@ -281,7 +281,7 @@ const Aside = () => {
           </Link>
           <Link to="/" className="Aside_main_row_col">
             <div className="Aside_main_row_col_img">
-              <img src={ProfileImg} alt="Profile image" />
+              <img src={ProfileImg} alt="ProfileImage" />
             </div>
             <div className="Aside_main_row_col_title">Профиль</div>
           </Link>

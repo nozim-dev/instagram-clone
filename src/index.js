@@ -16,7 +16,7 @@ import Explorer from "./Page/Explorer/Explorer";
 import Reels from "./Page/Reels/Reels";
 import HomeLayout from "./layouts/HomeLayout";
 import Main from "./Components/Main/Main";
-import VideoComponent from "./Page/VideoComponent";
+// import VideoComponent from "./Page/VideoComponent";
 // 1. Object usilida ishlatish
 // const route = createBrowserRouter([
 //   {

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./style.scss";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const navigate = useNavigate();
