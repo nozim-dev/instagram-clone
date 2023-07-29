@@ -1,0 +1,242 @@
+@import '../../_variable';
+
+.Reels {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .Reels_row {
+        width: 100%;
+        padding: 32px 0 0 0;
+        scroll-snap-type: y mandatory;
+        overflow-y: auto;
+        height: 100vh;
+        scroll-padding-bottom: 16px;
+        scroll-padding-top: 16px;
+
+        .Reels_row_col {
+            width: 100%;
+            margin: auto;
+            max-width: 500px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-end;
+            height: fit-content;
+            position: relative;
+            scroll-snap-align: center;
+            scroll-snap-stop: always;
+
+            .Reels_row_col_content {
+                width: 100%;
+                flex: 2;
+                height: 100%;
+                max-width: 400px;
+                position: relative;
+
+                .Reels_row_col_content_video {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 12px;
+                    position: relative;
+                    z-index: 2;
+                    cursor: pointer;
+                    video {
+                        border-radius: 12px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .Reels_row_col_content_img {
+                    position: absolute;
+                    top: 0%;
+                    left: -7.5%;
+                    z-index: 1;
+                    min-width: 115%;
+                    height: 100%;
+                    filter: blur(30px);
+                    opacity: .3;
+                    transition: all .2s;
+                    // animation: anim1 4s alternate infinite cubic-bezier(0.47, 0, 0.745, 0.715);
+
+                    // @keyframes anim1 {
+                    //     from {
+                    //         top: 0%;
+                    //         border-radius: 0;
+                    //     }
+
+                    //     to {
+                    //         top: 60%;
+                    //         border-radius: 60%;
+                    //     }
+                    // }
+                }
+
+                .Reels_row_col_content_title {
+                    padding: 0 10px 10px 8px;
+                    width: 100%;
+                    max-width: 400px;
+                    position: absolute;
+                    top: 78%;
+                    left: 2%;
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 2;
+
+                    .Reels_row_col_content_title_top {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .Reels_row_col_content_title_img {
+                            min-width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            cursor: pointer;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .Reels_row_col_content_title_userName {
+                            line-height: 18px;
+                            font-size: 14px;
+                            color: #fff;
+                            font-weight: 600;
+                            font-family: $font1;
+                            cursor: pointer;
+                        }
+
+                        .Reels_row_col_content_title_btn {
+                            font-weight: 600;
+                            color: #fff;
+                            font-family: $font1;
+                            font-size: .875rem;
+                            font-size: 14px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .Reels_row_col_content_title_comment {
+                        width: 100%;
+                        font-size: 14px;
+                        line-height: 18px;
+                        font-family: $font1;
+                        color: #fff;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        overflow: hidden;
+                        margin-top: 15px;
+                        cursor: pointer;
+                    }
+
+                    .Reels_row_col_content_title_music {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-top: 15px;
+
+                        span {
+                            width: 12px !important;
+                            height: 12px !important;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            cursor: pointer;
+
+                            p {
+                                display: inline-block;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                font-size: 14px;
+                                line-height: 18px;
+                                font-family: $font1;
+                                color: #fff;
+                                text-overflow: ellipsis;
+                            }
+                        }
+
+                        p {
+                            display: inline-block;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            font-size: 14px;
+                            line-height: 18px;
+                            font-family: $font1;
+                            color: #fff;
+                            text-overflow: ellipsis;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .Reels_row_col_content_muteControl {
+                    position: absolute;
+                    top: 8px;
+                    right: 8px;
+                    background-color: rgba(219, 219, 219, .2);
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    z-index: 2;
+                }
+            }
+
+            .Reels_row_col_options {
+                flex: .2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+
+                .Reels_row_col_options_item {
+                    text-align: center;
+                    cursor: pointer;
+
+                    span {
+                        width: 24px;
+                        height: 24px;
+                        margin: auto;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        svg {
+                            text-align: center;
+                        }
+                    }
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 8px;
+                    }
+
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+
+        .Reels_row_col_empty {
+            height: 16px;
+            width: 100%;
+        }
+    }
+}
+
+// -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0004);
